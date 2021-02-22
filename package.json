@@ -1,0 +1,29 @@
+{
+  "name": "manage-landing-page-master",
+  "version": "1.0.0",
+  "description": "landing page for manage",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^4.6.0",
+    "owl.carousel": "^2.3.4"
+  },
+  "scripts": {
+    "watch": "node-sass -w sass/main.scss css/style.css ",
+    "server": "live-server",
+    "start": "npm-run-all --parallel server watch",
+    "compile": "node-sass sass/main.scss css/style.comp.css",
+    "prefix": "postcss --use autoprefixer -o css/style.prefix.css css/style.comp.css",
+    "compress": "node-sass css/style.comp.css css/style.css --output-style compressed",
+    "build": "npm-run-all compile prefix compress"
+  },
+  "author": "Tolu",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.2.3",
+    "concat": "^1.0.3",
+    "node-sass": "^5.0.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.2.4",
+    "postcss-cli": "^8.3.1"
+  }
+}
